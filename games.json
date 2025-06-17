@@ -2,11 +2,16 @@
   {
     "title": "PolyTrack 5.0",
     "thumbnail": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/images/p5.png",
-    "url": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/games/polytrack-5/"
+    "url": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/games/polytrack-5/index.html"
   },
   {
     "title": "Ping Pong",
     "thumbnail": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/images/pingpong.png",
-    "url": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/games/pingpong/"
+    "url": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/games/pingpong/index.html"
+  },
+  {
+    "title": "PolyTrack OG",
+    "thumbnail": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/images/polytrack.png",
+    "url": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/games/polytrackog.html"
   }
 ]
