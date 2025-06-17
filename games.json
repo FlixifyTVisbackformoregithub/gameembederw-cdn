@@ -1,12 +1,12 @@
 [
   {
     "title": "PolyTrack 5.0",
-    "thumbnail": "images/p5.png",
-    "url": "https://vplaza.org/games/polytrack-5/"
+    "thumbnail": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/images/p5.png",
+    "url": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/games/polytrack-5/"
   },
   {
     "title": "Ping Pong",
-    "thumbnail": "images/pingpong.png",
-    "url": "https://vplaza.org/games/pingpong/"
+    "thumbnail": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/images/pingpong.png",
+    "url": "https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/games/pingpong/"
   }
 ]
