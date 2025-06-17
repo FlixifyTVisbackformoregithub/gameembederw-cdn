@@ -1,72 +1,26 @@
-(async () => {
-  const script = document.currentScript;
-  const apiUrl = script.getAttribute('data-api');
-  const containerSelector = script.getAttribute('data-target');
-  const container = document.querySelector(containerSelector);
-
-  if (!container) return console.error('Target container not found');
+document.addEventListener("DOMContentLoaded", async () => {
+  const apiUrl = document.currentScript.getAttribute("data-api");
+  const targetSelector = document.currentScript.getAttribute("data-target");
+  const target = document.querySelector(targetSelector);
 
   const res = await fetch(apiUrl);
   const games = await res.json();
 
-  const style = document.createElement('style');
-  style.textContent = `
-    .game-card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 16px;
-      padding: 16px;
-    }
-    .game-card {
-      background: #111;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-      transition: transform 0.2s;
-      color: white;
-      text-align: center;
-    }
-    .game-card:hover {
-      transform: scale(1.05);
-    }
-    .game-card img {
-      width: 100%;
-      height: 120px;
-      object-fit: cover;
-    }
-    .game-card h3 {
-      margin: 10px 0;
-      font-size: 1rem;
-    }
-    .game-card a {
-      display: inline-block;
-      margin-bottom: 12px;
-      padding: 6px 12px;
-      background: #1f1f1f;
-      border: 1px solid #444;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-    .game-card a:hover {
-      background: #333;
-    }
-  `;
-  document.head.appendChild(style);
+  target.innerHTML = games.map(game => `
+    <div onclick="openGame('${game.url}')" style="cursor:pointer;background:#111;border-radius:12px;padding:12px;margin:10px;display:inline-block;width:200px;text-align:center;color:white;font-family:sans-serif;box-shadow:0 0 10px rgba(255,255,255,0.1);transition:transform 0.2s;">
+      <img src="${game.thumbnail}" style="width:100%;border-radius:8px;" />
+      <h3 style="margin-top:10px;font-size:18px;">${game.title}</h3>
+    </div>
+  `).join("");
+});
 
-  const grid = document.createElement('div');
-  grid.className = 'game-card-grid';
+// Global functions
+window.openGame = function (url) {
+  document.getElementById("gameFrame").src = url;
+  document.getElementById("gameModal").style.display = "block";
+}
 
-  games.forEach(game => {
-    const card = document.createElement('div');
-    card.className = 'game-card';
-    card.innerHTML = `
-      <img src="${game.thumbnail}" alt="${game.title}" />
-      <h3>${game.title}</h3>
-      <a href="${game.url}" target="_blank">Play</a>
-    `;
-    grid.appendChild(card);
-  });
-
-  container.appendChild(grid);
-})();
+window.closeGame = function () {
+  document.getElementById("gameModal").style.display = "none";
+  document.getElementById("gameFrame").src = "";
+}
