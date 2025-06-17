@@ -1,12 +1,12 @@
 [
   {
     "title": "PolyTrack 5.0",
-    "thumbnail": "/images/p5.png",
+    "thumbnail": "images/p5.png",
     "url": "https://vplaza.org/games/polytrack-5/"
   },
   {
     "title": "Ping Pong",
-    "thumbnail": "/images/pingpong.png",
+    "thumbnail": "images/pingpong.png",
     "url": "https://vplaza.org/games/pingpong/"
   }
 ]
