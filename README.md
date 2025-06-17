@@ -14,4 +14,7 @@ ___________________________
           data-api="https://cdn.jsdelivr.net/gh/FlixifyTVisbackformoregithub/gameembederw-cdn/games.json"
           data-target="#gameContainer"></script>
 </body>
+
 into your code
+
+Make sure to also add a game containar which the code is found in this repo under plaintext.txt (add the html in that above into the body section ABOVE the script tags)!!!
